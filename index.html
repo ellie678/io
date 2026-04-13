@@ -366,27 +366,22 @@
                 <div class="code-section-title">2. 데이터 (artworks 배열)</div>
                 <div class="code-section-desc">전시할 학습 자료 정보를 목록으로 저장</div>
                 <div class="code-block">{ title: "김정우", category: "국어", image: "img11.jpg" }
-```
 
 → 이런 형태로 15개 자료 저장</div>
 </div>
 
-```
             <div class="code-section">
                 <div class="code-section-title">3. 3D 공간 구성 (createGallerySpace)</div>
                 <div class="code-section-desc">원형 바닥과 원통형 벽으로 가상 전시관 공간을 생성</div>
                 <div class="code-block">CylinderGeometry(13, 13, 7)
-```
 
 → 반지름 13, 높이 7의 원통형 벽 생성</div>
 </div>
 
-```
             <div class="code-section">
                 <div class="code-section-title">4. 키보드 입력 감지</div>
                 <div class="code-section-desc">WASD 키를 누르면 각 방향 변수를 true로 바꿈</div>
                 <div class="code-block">document.addEventListener('keydown', (e) => {
-```
 
 if(e.code === ‘KeyW’) moveForward = true;
 if(e.code === ‘KeyS’) moveBackward = true;
@@ -395,12 +390,10 @@ if(e.code === ‘KeyD’) moveRight = true;
 });</div>
 </div>
 
-```
             <div class="code-section">
                 <div class="code-section-title">5. 실제 카메라 이동 처리</div>
                 <div class="code-section-desc">매 프레임마다 카메라 위치를 실제로 이동</div>
                 <div class="code-block">function updateCamera() {
-```
 
 const dir = new THREE.Vector3();
 camera.getWorldDirection(dir);
@@ -414,12 +407,10 @@ camera.position.add(dir.multiplyScalar(-cameraSpeed));
 }</div>
 </div>
 
-```
             <div class="code-section">
                 <div class="code-section-title">6. 매 프레임 반복 실행</div>
                 <div class="code-section-desc">requestAnimationFrame이 1초에 약 60번 호출되어 부드러운 움직임 구현</div>
                 <div class="code-block">function animate() {
-```
 
 requestAnimationFrame(animate);
 updateCamera();
@@ -427,7 +418,6 @@ renderer.render(scene, camera);
 }</div>
 </div>
 
-```
         </div>
     </div>
 </div>
